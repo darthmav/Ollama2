@@ -54,6 +54,11 @@ ollama.chat(model='llama3', messages=[{'role': 'user', 'content': 'Why is the sk
 ollama.generate(model='llama3', prompt='Why is the sky blue?')
 ```
 
+### Generate With Images
+
+```python
+ollama.generate(model='llava', prompt='What is this image', images =['IMG_8798.JPG'])
+```
 ### List
 
 ```python
