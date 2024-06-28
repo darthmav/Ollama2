@@ -397,7 +397,7 @@ class Client(BaseClient):
     out = io.StringIO()
     for line in io.StringIO(modelfile):
       command, _, args = line.partition(' ')
-      if command.upper() not in ['FROM', 'ADAPTER']:
+      if command.upper() not in ['FROM', 'ADAPTER', 'LICENSE', 'TEMPLATE', 'SYSTEM']:
         print(line, end='', file=out)
         continue
 
@@ -792,7 +792,7 @@ class AsyncClient(BaseClient):
     out = io.StringIO()
     for line in io.StringIO(modelfile):
       command, _, args = line.partition(' ')
-      if command.upper() not in ['FROM', 'ADAPTER']:
+      if command.upper() not in ['FROM', 'ADAPTER', 'LICENSE', 'TEMPLATE', 'SYSTEM']:
         print(line, end='', file=out)
         continue
 
